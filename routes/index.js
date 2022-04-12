@@ -108,6 +108,11 @@ router.post('/update', function (req, res) {
 
 
 })
+router.get('/json', function (req, res) {
+  database.find({}, function(err,data){
+    res.send(data)
+  })
+})
 
 
 
